@@ -1,0 +1,9 @@
+﻿
+create view mostrar_img as (
+	SELECT 
+		imagenes.id as tbl_img_id, imgfiles.id, imgfiles.file, imgfiles.fileprincipal
+	FROM 
+		imgfiles
+	INNER JOIN imagenes ON 
+		imagenes.id = imgfiles.id_imagenes
+);
